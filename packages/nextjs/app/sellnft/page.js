@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { ethers } from 'ethers';
-import { useRouter } from 'next/navigation';
+
 import { TailSpin } from "react-loader-spinner";
 import Navbar from '../Navbar';
 import lighthouse from '@lighthouse-web3/sdk'
@@ -10,6 +10,11 @@ import axios from 'axios';
 import { upload } from "@spheron/browser-upload";
 import { notification } from 'antd';
 import { create as IPFSHTTPClient } from 'ipfs-http-client';
+
+import { useRouter } from 'next/navigation';
+
+import { marketplaceAddress } from '../../config';
+import NFTMarketplace from "../../artifacts/contracts/NFTMarketplace.sol/NFTMarketplace.json"
 
 
 const projectId = '2EFZSrxXvWgXDpOsDrr4cQosKcl';
@@ -31,10 +36,6 @@ let cid1 = null;
 
 const apiKey = "b3b18111.271ba6addd39409a80ac3fee4d78070c" 
 
-import { marketplaceAddress } from '../../config';
-// import { marketplaceAddress } from '../config';
-// import NFTMarketplace from '../artifacts/contracts/NFTMarketplace.sol/NFTMarketplace.json';
-import NFTMarketplace from "../../artifacts/contracts/NFTMarketplace.sol/NFTMarketplace.json"
 export default function CreateItem() {
 // 
 // for the sdk
@@ -85,21 +86,6 @@ const [LIghthouseCid,SetLIghthouseCid] = useState('');
     const { name, description, price } = formInput;
 
 
-    if( !name){
-      toast.warn("Asset Name filed is empty");
-    }
-    else if(description == ""){
-      toast.warn("Asset description filed is empty");
-    }
-    else if(price== ""){
-      toast.warn("Price filed is empty");
-    }
-    else if(uploaded == false){
-      toast.warn("Files upload required");
-    }
-    else if(uploaded == false){
-      toast.warn("Files upload required");
-    }
 
   
     if (!name || !description || !price || !fileUrl) {
@@ -150,14 +136,14 @@ const [LIghthouseCid,SetLIghthouseCid] = useState('');
       
       return LightHouseurl;
     } catch (error) {
-      toast.warn("Error uploading image");
+
       console.log('Error uploading file: ', error);
     }
   
     setuploading(false);
 		setuploaded(true);
 		 
-		toast.success("Files uploaded sucessfully");
+
 
   }
 
@@ -167,7 +153,6 @@ const [LIghthouseCid,SetLIghthouseCid] = useState('');
     e.preventDefault();
 
 
-    toast.success("Proposal Uploaded to LightHouse")
 
 
     const url = await uploadToIPFS();
@@ -217,7 +202,7 @@ const [LIghthouseCid,SetLIghthouseCid] = useState('');
     
 
     alert('Successfully created NFT');
-    toast.success("Files uploaded sucessfully");
+
    
   }
 
