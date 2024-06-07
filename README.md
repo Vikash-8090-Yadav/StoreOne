@@ -95,3 +95,8 @@ yarn start
 6. Access the dApp:
 Open your web browser and visit http://localhost:3000 to interact with the OneStore application.
 
+
+
+## What next for OneStore?
+
+- Chat b/w seller and buyer
