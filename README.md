@@ -5,7 +5,7 @@
 
 ## This project is hosted at : In progress
 
-## Demo Video: 
+## Demo Video: https://youtu.be/SVer5dBr1ts?si=E70K9I6xU3N4jiU8
 
 ## The main aim of this project  is to re sell old items  at any price in the form of nft. 
 
