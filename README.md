@@ -56,3 +56,32 @@ https://sepolia.scrollscan.com/address/0x3F4AA7009Bb02bFE0c287950F78b121a2c9C857
 ![Screenshot from 2024-06-07 06-42-51](https://github.com/Vikash-8090-Yadav/StoreOne/assets/85225156/f3f2733f-c640-4706-9c51-c0a8425ef9e9)
 
 
+
+## 🚀 Setting up the project locally
+
+To run the Onestore locally, follow these steps:
+1. Clone the repository:
+ ```bash
+ git clone https://github.com/Vikash-8090-Yadav/StoreOne
+ ```
+ 2. Navigate to the project directory:
+```bash
+cd  StoreOne/packages/nextjs
+```
+3. Node Re-versioning
+
+```bash
+export NODE_OPTIONS=--openssl-legacy-provider
+```
+
+4. Install the dependencies:
+```bash
+yarn install
+```
+5. Start the development server:
+```bash
+yarn start
+```
+6. Access the dApp:
+Open your web browser and visit http://localhost:3000 to interact with the OneStore application.
+
