@@ -10,9 +10,8 @@
 ## The main aim of this project  is to re sell old items  at any price in the form of nft. 
 
 
-# Smart conrtract for quasar-contract:
-
-0x3F4AA7009Bb02bFE0c287950F78b121a2c9C8575
+# Smart conrtract deployed on scroll sepolia: 0x3F4AA7009Bb02bFE0c287950F78b121a2c9C8575
+ 
 
 https://sepolia.scrollscan.com/address/0x3F4AA7009Bb02bFE0c287950F78b121a2c9C8575
 
