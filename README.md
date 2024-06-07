@@ -40,7 +40,6 @@ https://sepolia.scrollscan.com/address/0x3F4AA7009Bb02bFE0c287950F78b121a2c9C857
 
 ![Screenshot from 2024-06-07 06-42-17](https://github.com/Vikash-8090-Yadav/StoreOne/assets/85225156/2b5e647c-7e5e-48e6-a7af-a011e834b6cb)
 
-![Screenshot from 2024-06-07 06-42-51](https://github.com/Vikash-8090-Yadav/StoreOne/assets/85225156/991cf5f2-7cfa-426b-a7f0-d9578b603794)
 
 ## Resell item (My nft section)
 
