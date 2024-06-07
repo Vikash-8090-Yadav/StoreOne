@@ -35,6 +35,7 @@ https://sepolia.scrollscan.com/address/0x3F4AA7009Bb02bFE0c287950F78b121a2c9C857
 ![Screenshot from 2024-06-07 06-24-09](https://github.com/Vikash-8090-Yadav/StoreOne/assets/85225156/563ce980-aebf-4a8a-b96b-4aa84b2c40d8)
 
 ## Sell item 
+
 - Any mmember can sell their item anyy time and anywhere
 - User have to stake 0.0025 XDAI for making their product listed on marketplace
 
@@ -55,6 +56,15 @@ https://sepolia.scrollscan.com/address/0x3F4AA7009Bb02bFE0c287950F78b121a2c9C857
 
 ![Screenshot from 2024-06-07 06-42-51](https://github.com/Vikash-8090-Yadav/StoreOne/assets/85225156/f3f2733f-c640-4706-9c51-c0a8425ef9e9)
 
+
+## Debug Contract : WIth the help of scaffold-ETH2 template
+
+It creates an  UI  within  the dapp to interact with the contract wihtout going anywhere.
+
+![Screenshot from 2024-06-07 06-49-59](https://github.com/Vikash-8090-Yadav/StoreOne/assets/85225156/94536dff-8298-4fda-9fd7-bba4c977b701)
+
+
+#### To learn  more about please   refer this Repo: https://github.com/scaffold-eth/scaffold-eth-2
 
 
 ## 🚀 Setting up the project locally
