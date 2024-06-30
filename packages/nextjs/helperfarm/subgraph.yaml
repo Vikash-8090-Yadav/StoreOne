@@ -1,0 +1,62 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Contract
+    network: scroll-sepolia
+    source:
+      address: "0xc466d29DC75A85173086055212677e9b416201B0"
+      abi: Contract
+      startBlock: 4092523
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - ApprovalForAll
+        - BatchMetadataUpdate
+        - ChaiBought
+        - Donation
+        - ListingPriceUpdated
+        - MarketItemCreated
+        - MarketSale
+        - MetadataUpdate
+        - TokenItem
+        - TokenResold
+        - Transfer
+        - _updateData
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,indexed uint256)
+          handler: handleApproval
+        - event: ApprovalForAll(indexed address,indexed address,bool)
+          handler: handleApprovalForAll
+        - event: BatchMetadataUpdate(uint256,uint256)
+          handler: handleBatchMetadataUpdate
+        - event: ChaiBought(string,string,uint256,address,uint256)
+          handler: handleChaiBought
+        - event: Donation(indexed address,string,string,uint256,uint256)
+          handler: handleDonation
+        - event: ListingPriceUpdated(uint256)
+          handler: handleListingPriceUpdated
+        - event: MarketItemCreated(indexed uint256,address,address,uint256,bool)
+          handler: handleMarketItemCreated
+        - event: MarketSale(indexed uint256,address,address,uint256)
+          handler: handleMarketSale
+        - event: MetadataUpdate(uint256)
+          handler: handleMetadataUpdate
+        - event: TokenItem(string,uint256,uint256)
+          handler: handleTokenItem
+        - event: TokenResold(indexed uint256,address,address,uint256)
+          handler: handleTokenResold
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+        - event: _updateData(string,string,uint256,address)
+          handler: handle_updateData
+      file: ./src/contract.ts
