@@ -31,6 +31,12 @@ https://sepolia.scrollscan.com/address/0x3F4AA7009Bb02bFE0c287950F78b121a2c9C857
 ![342003762-0fe50676-b85d-4951-b278-9335840d4f47](https://github.com/Vikash-8090-Yadav/StoreOne/assets/85225156/b8e1c04c-2605-41ae-8573-218b410ea9f3)
 
 
+#### I created subgraph for this prroject and query to make various dashboard like Marketplace, Dashboard, Experience cebtre
+
+#### Here's the Link of the subgraph-> https://thegraph.com/studio/subgraph/monetizedo/playground
+
+
+
 You can find the Graph Query beow 
 
 - Marketplace:  https://github.com/Vikash-8090-Yadav/StoreOne/blob/main/packages/nextjs/app/marketplace.js#L36
