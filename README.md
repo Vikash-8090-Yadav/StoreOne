@@ -25,6 +25,18 @@ https://sepolia.scrollscan.com/address/0x3F4AA7009Bb02bFE0c287950F78b121a2c9C857
 ![Screenshot from 2024-06-07 06-40-18](https://github.com/Vikash-8090-Yadav/StoreOne/assets/85225156/43e81fd5-e407-4f51-8b32-ef9f92d03691)
 
 
+## The Graph Integeration
+
+
+![Screenshot from 2024-06-30 16-58-46](https://github.com/Vikash-8090-Yadav/StoreOne/assets/85225156/e7261b68-50a1-4aeb-be94-ee16e75c38b5)
+
+
+You can find the Graph Query beow 
+
+- Marketplace:  https://github.com/Vikash-8090-Yadav/StoreOne/blob/main/packages/nextjs/app/marketplace.js#L36
+
+- Review:  https://github.com/Vikash-8090-Yadav/StoreOne/blob/main/packages/nextjs/Component/v1.0.0/Review/Memos.jsx#L14
+
 
 # What it does
 
