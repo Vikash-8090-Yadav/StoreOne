@@ -28,7 +28,7 @@ https://sepolia.scrollscan.com/address/0x3F4AA7009Bb02bFE0c287950F78b121a2c9C857
 ## The Graph Integeration
 
 
-![Screenshot from 2024-06-30 16-58-46](https://github.com/Vikash-8090-Yadav/StoreOne/assets/85225156/e7261b68-50a1-4aeb-be94-ee16e75c38b5)
+![344371629-3b017506-74b9-4cd6-a3a3-c883e450286d](https://github.com/Vikash-8090-Yadav/StoreOne/assets/85225156/ded64397-224d-4eb6-8819-219716199d42)
 
 
 You can find the Graph Query beow 
