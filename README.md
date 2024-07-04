@@ -3,8 +3,6 @@
 ![Screenshot from 2024-06-07 06-24-09](https://github.com/Vikash-8090-Yadav/StoreOne/assets/85225156/2aecac4b-9dde-47bc-a5c3-1740d2be09fb)
 
 
-## This project is hosted at : In progress
-
 ## Demo Video: https://youtu.be/SVer5dBr1ts?si=E70K9I6xU3N4jiU8
 
 ## The main aim of this project  is to re sell old items  at any price in the form of nft. 
