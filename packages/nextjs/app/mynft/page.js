@@ -18,43 +18,6 @@ import { marketplaceAddress } from '../../config';
 import NFTMarketplace from "../../artifacts/contracts/NFTMarketplace.sol/NFTMarketplace.json "
 
 
-
-async function Verify(cid){
-
-
-  try {
-    // https://gateway.lighthouse.storage/ipfs/QmTMVyisen2BrnoHg1fyA53n6fnqETMvedcDRPsoNH5rN8
-    // const response1 = await axios.get(`https://api.lighthouse.storage/api/lighthouse/get_proof?network=testnet&cid=${cid}`);
-    // const dealInfo = response1.data.dealInfo[0].dealId;
-    // const polygonScanlink = `https://calibration.filfox.info/en/deal/${dealInfo}`;
-    
-
-    const verifyData = ` https://gateway.lighthouse.storage/ipfs/${cid}`;
-    notification.success({
-      message: ' Click here for the verification',
-      description: (
-        <div  >
-          Transaction Hash: <a href={`https://gateway.lighthouse.storage/ipfs/${cid}`} target="_blank" rel="noopener noreferrer">{cid}</a>
-        </div>
-      )
-    });
-  } catch (error) {
-    console.error('Error occurred:', error);
-    // Handle the error here, you can log it or show a toast message indicating the error.
-    // For example:
-    notification.error({
-      message: "Miners still verifying!",
-      description: (
-        <div>
-          
-        </div>
-      )
-    });
-    
-  }
-}
-
-
 export default function MyAssets() {
   const [nfts, setNfts] = useState([]);
   const [loadingState, setLoadingState] = useState('not-loaded');
