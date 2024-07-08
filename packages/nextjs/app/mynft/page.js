@@ -15,39 +15,8 @@ import { notification } from 'antd';
 import { useRouter } from 'next/navigation';
 
 import { marketplaceAddress } from '../../config';
-import NFTMarketplace from "../../artifacts/contracts/NFTMarketplace.sol/NFTMarketplace.json"
+import NFTMarketplace from "../../artifacts/contracts/NFTMarketplace.sol/NFTMarketplace.json "
 
-
-async function PODSI(cid){
-  try {
-    // https://gateway.lighthouse.storage/ipfs/QmTMVyisen2BrnoHg1fyA53n6fnqETMvedcDRPsoNH5rN8
-    const response1 = await axios.get(`https://api.lighthouse.storage/api/lighthouse/get_proof?network=testnet&cid=${cid}`);
-    
-
-    
-    notification.success({
-      message: ' Click here for the verification',
-      description: (
-        <div  >
-          Transaction Hash: <a href={`https://api.lighthouse.storage/api/lighthouse/get_proof?network=testnet&cid=${cid}`} target="_blank" rel="noopener noreferrer">{'CLICK HERE'}</a>
-        </div>
-      )
-    });
-  } catch (error) {
-    console.error('Error occurred:', error);
-    // Handle the error here, you can log it or show a toast message indicating the error.
-    // For example:
-    notification.error({
-      message: "Miners still verifying!",
-      description: (
-        <div>
-          
-        </div>
-      )
-    });
-    
-  }
-}
 
 
 async function Verify(cid){
