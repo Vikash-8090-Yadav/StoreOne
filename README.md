@@ -3,8 +3,6 @@
 ![Screenshot from 2024-06-07 06-24-09](https://github.com/Vikash-8090-Yadav/StoreOne/assets/85225156/2aecac4b-9dde-47bc-a5c3-1740d2be09fb)
 
 
-## This project is hosted at : In progress
-
 ## Demo Video: https://youtu.be/SVer5dBr1ts?si=E70K9I6xU3N4jiU8
 
 ## The main aim of this project  is to re sell old items  at any price in the form of nft. 
@@ -24,6 +22,24 @@ https://sepolia.scrollscan.com/address/0x3F4AA7009Bb02bFE0c287950F78b121a2c9C857
 
 ![Screenshot from 2024-06-07 06-40-18](https://github.com/Vikash-8090-Yadav/StoreOne/assets/85225156/43e81fd5-e407-4f51-8b32-ef9f92d03691)
 
+
+## The Graph Integeration
+
+
+![342003762-0fe50676-b85d-4951-b278-9335840d4f47](https://github.com/Vikash-8090-Yadav/StoreOne/assets/85225156/b8e1c04c-2605-41ae-8573-218b410ea9f3)
+
+
+#### I created subgraph for this prroject and query to make various dashboard like Marketplace, Dashboard, Experience cebtre
+
+#### Here's the Link of the subgraph-> https://thegraph.com/studio/subgraph/monetizedo/playground
+
+
+
+You can find the Graph Query beow 
+
+- Marketplace:  https://github.com/Vikash-8090-Yadav/StoreOne/blob/main/packages/nextjs/app/marketplace.js#L36
+
+- Review:  https://github.com/Vikash-8090-Yadav/StoreOne/blob/main/packages/nextjs/Component/v1.0.0/Review/Memos.jsx#L14
 
 
 # What it does

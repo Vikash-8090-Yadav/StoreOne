@@ -12,6 +12,7 @@ import {
   marketplaceAddress
 } from '../config'
 
+
 import NFTMarketplace from '../abi/marketplace.json'
 
 
@@ -26,6 +27,8 @@ export default function Home() {
   const [loadingState, setLoadingState] = useState('not-loaded')
   const [isLoading, setIsLoading] = useState(true); 
   const [tokens, setTokens] = useState([]);
+  const [tokens1, setTokens1] = useState([]);
+  
 
 
   
