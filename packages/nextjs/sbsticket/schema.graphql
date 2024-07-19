@@ -1,0 +1,137 @@
+type sbsticket_approval @entity {
+    id: ID!
+    evt_tx_hash: String!
+    evt_index: BigInt!
+    evt_block_time: String!
+    evt_block_number: BigInt!
+    approved: String!
+    owner: String!
+    token_id: BigDecimal!
+}
+type sbsticket_approval_for_all @entity {
+    id: ID!
+    evt_tx_hash: String!
+    evt_index: BigInt!
+    evt_block_time: String!
+    evt_block_number: BigInt!
+    approved: Boolean!
+    operator: String!
+    owner: String!
+}
+type sbsticket_batch_metadata_update @entity {
+    id: ID!
+    evt_tx_hash: String!
+    evt_index: BigInt!
+    evt_block_time: String!
+    evt_block_number: BigInt!
+    u_from_token_id: BigDecimal!
+    u_to_token_id: BigDecimal!
+}
+type sbsticket_chai_bought @entity {
+    id: ID!
+    evt_tx_hash: String!
+    evt_index: BigInt!
+    evt_block_time: String!
+    evt_block_number: BigInt!
+    amount: BigDecimal!
+    buyer: String!
+    message: String!
+    name: String!
+    timestamp: BigDecimal!
+}
+type sbsticket_donation @entity {
+    id: ID!
+    evt_tx_hash: String!
+    evt_index: BigInt!
+    evt_block_time: String!
+    evt_block_number: BigInt!
+    amount: BigDecimal!
+    from: String!
+    message: String!
+    name: String!
+    timestamp: BigDecimal!
+}
+type sbsticket_listing_price_updated @entity {
+    id: ID!
+    evt_tx_hash: String!
+    evt_index: BigInt!
+    evt_block_time: String!
+    evt_block_number: BigInt!
+    new_price: BigDecimal!
+}
+type sbsticket_market_item_created @entity {
+    id: ID!
+    evt_tx_hash: String!
+    evt_index: BigInt!
+    evt_block_time: String!
+    evt_block_number: BigInt!
+    owner: String!
+    price: BigDecimal!
+    seller: String!
+    sold: Boolean!
+    token_id: BigDecimal!
+}
+type sbsticket_market_sale @entity {
+    id: ID!
+    evt_tx_hash: String!
+    evt_index: BigInt!
+    evt_block_time: String!
+    evt_block_number: BigInt!
+    buyer: String!
+    price: BigDecimal!
+    seller: String!
+    token_id: BigDecimal!
+}
+type sbsticket_metadata_update @entity {
+    id: ID!
+    evt_tx_hash: String!
+    evt_index: BigInt!
+    evt_block_time: String!
+    evt_block_number: BigInt!
+    u_token_id: BigDecimal!
+}
+type sbsticket_token_item @entity {
+    id: ID!
+    evt_tx_hash: String!
+    evt_index: BigInt!
+    evt_block_time: String!
+    evt_block_number: BigInt!
+    new_token_id: BigDecimal!
+    price: BigDecimal!
+    token_uri: String!
+}
+type sbsticket_token_resold @entity {
+    id: ID!
+    evt_tx_hash: String!
+    evt_index: BigInt!
+    evt_block_time: String!
+    evt_block_number: BigInt!
+    owner: String!
+    price: BigDecimal!
+    seller: String!
+    token_id: BigDecimal!
+}
+type sbsticket_transfer @entity {
+    id: ID!
+    evt_tx_hash: String!
+    evt_index: BigInt!
+    evt_block_time: String!
+    evt_block_number: BigInt!
+    from: String!
+    to: String!
+    token_id: BigDecimal!
+}
+type sbsticket__update_data @entity {
+    id: ID!
+    evt_tx_hash: String!
+    evt_index: BigInt!
+    evt_block_time: String!
+    evt_block_number: BigInt!
+    buyer: String!
+    func: String!
+    timestamp: BigDecimal!
+    txn: String!
+}
+
+
+
