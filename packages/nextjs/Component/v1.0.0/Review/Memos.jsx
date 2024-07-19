@@ -8,11 +8,11 @@ const Memos = ({ state }) => {
   const [tokens, setTokens] = useState([]);
   const [isLoading, setIsLoading] = useState(true); // Add loading state
 
-  const QueryURL = "https://api.studio.thegraph.com/query/67475/monetizedo/v0.0.1";
+  const QueryURL = "https://api.studio.thegraph.com/query/67475/sbs-ticket/v0.0.1";
 
   const query = `
     {
-      donations(first: 10, orderBy: id) {
+      sbsticketDonations(first: 10, orderBy: id) {
       from
       id
       message
@@ -34,7 +34,7 @@ const Memos = ({ state }) => {
     const getTokens = async () => {
       try {
         const { data } = await client.query(query).toPromise();
-        setTokens(data.donations);
+        setTokens(data.sbsticketDonations);
         setIsLoading(false); // Data is loaded
       } catch (error) {
         console.error("Error fetching data:", error);
