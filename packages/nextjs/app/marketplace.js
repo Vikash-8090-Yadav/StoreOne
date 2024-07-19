@@ -6,12 +6,11 @@ import Navbar from "../Component/Course/Nav";
 import { createClient } from "urql";
 import { ToastContainer, toast } from 'react-toastify';
 import { notification } from 'antd';
-import {Web3} from 'web3';
+
 
 import {
   marketplaceAddress
 } from '../config'
-
 
 import NFTMarketplace from '../abi/marketplace.json'
 
@@ -27,20 +26,17 @@ export default function Home() {
   const [loadingState, setLoadingState] = useState('not-loaded')
   const [isLoading, setIsLoading] = useState(true); 
   const [tokens, setTokens] = useState([]);
-  const [tokens1, setTokens1] = useState([]);
-  
 
 
   
-  const QueryURL = "https://api.studio.thegraph.com/query/67475/monetizedo/v0.0.1";
+  const QueryURL = "https://api.studio.thegraph.com/query/67475/sbs-ticket/v0.0.1";
 
   let query = `
     {
-      tokenItems {
-        newTokenId
-      tokenURI
+      sbsticketTokenItems {
+        token_uri
       price
-      transactionHash
+      new_token_id
       }
     }
   `;
@@ -50,68 +46,27 @@ export default function Home() {
   });
 
   useEffect(() => {
-
-    if (!client) {
-      return;
-    }
-
-    async function  test(){
-
-      const networks = {
-        basesepolia: {
-        chainId: `0x${Number(84532).toString(16)}`,
-        chainName: "basesepolia",
-        nativeCurrency: {
-          name: "basesepolia",
-          symbol: "ETH",
-          decimals: 18,
-        },
-        rpcUrls: ["https://sepolia.base.or"],
-      },
-    };
-    if(typeof window.ethereum =="undefined"){
-      console.log("PLease install the metamask");
+  if (!client) {
+    return;
   }
-  let web3 =  new Web3(window.ethereum);
- 
-  if(web3.network !=="basesepolia"){
-      await window.ethereum.request({
-          method:"wallet_addEthereumChain",
-          params:[{
-              ...networks["basesepolia"]
-          }]
-      })
-  }
-}
-async function checkNetworkAndLoadNFTs() {
-  try {
-    const web3 = new Web3(window.ethereum);
-    const currentChainId = await web3.eth.getChainId();
-    localStorage.setItem("ChainId",currentChainId);
 
-   
+  const getTokens = async () => {  
     
-  
-
-    let chk = localStorage.getItem("ChainId");
-
-    const { data } = await client.query(query).toPromise();
-      setTokens(data.tokenItems);
-      console.log(data.tokenItems);
+    try {
+      const { data } = await client.query(query).toPromise();
+      // console.log(data.sbsticketTokenItems);
+      setTokens(data.sbsticketTokenItems);
+      
       setIsLoading(false); // Data is loaded
       await loadNFTs();
-
-    if (chk !== '84532') { 
-      await test();
+    } catch (error) {
+      console.error("Error fetching data:", error);
     }
-    
-  } catch (error) {
-    console.error('Error checking network or loading NFTs:', error);
-  }
-}
+  };
 
-checkNetworkAndLoadNFTs();
-  }, [client])
+  getTokens();
+  // fetchNftTransactions();
+}, [client]);
 
 async function loadNFTs() {
   // await test();
@@ -120,10 +75,10 @@ async function loadNFTs() {
 
     const items = await Promise.all(tokens.map(async token => {
       // alert("try")
-      const meta = await axios.get(token.tokenURI);
+      const meta = await axios.get(token.token_uri);
       console.log("The i item is".meta);
       const price = await token.price / 10 ** 18;
-      const tokenId = await token.newTokenId;
+      const tokenId = await token.new_token_id;
       // alert("inside try")
       return {
         price,
@@ -166,7 +121,7 @@ async function loadNFTs() {
         <div className="grid flex  grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-1 unmrk">
           {
             nfts.map((nft, i) => (
-              <div key={i} className="border rounded-t-md   shadow rounded-xl overflow-hidden">
+              <div key={i} className="border rounded-t-md  umrkt shadow rounded-xl overflow-hidden">
                 <img   height="25px"  className = " w-full rounded-t-md duration-200 hover:scale-110 hover:overflow-hidden" src={nft.image} />
                 <div className="p-1">
                   <p style={{ height: '100%' }} className="text-2xl font-semibold">{nft.name}</p>
