@@ -127,6 +127,7 @@ app.frame('/domain', async(c) => {
   }
 
   const fruit = inputText || buttonValue;
+
   return c.res({
     image: (
       <div
